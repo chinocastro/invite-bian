@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>invitacion</title>
+   <style>
+        body{
+            background-color: white;
+        }
+        
+        #sobre{
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: flotar 2s infinite;
+        }
+
+        #sobre img{
+           width: 90%;
+        }
+
+        @keyframes flotar {
+            0% {
+                transform: translateY(10px);
+            }
+            50% {
+            transform: translateY(15px);
+            }
+            100% {
+            transform: translateY(10px);
+            }
+        }
+   </style>
+</head>
+<body>
+    <div id="sobre"">
+        <a href="invite-bian.html">
+          <img src="../img/sobre-abrir.png" alt="">
+        </a> 
+    </div>
+</body>
+</html>

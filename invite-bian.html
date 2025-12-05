@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>invitacion </title>
+
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2026 21:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+<body class="invitacion invitacion-dos invitacion-bian">
+    <div class="inicio" style="height: 100vh; background-image: url(../img/mariposa-uno.png); background-size: contain;">
+        <p class="p-uno" style="font-size: 20px;">¡ Te invito a mis 15 ♡ !</p> 
+        <p class="p-dos" style="font-size: 40px;"> Bian.</p>
+        <div>
+          <img src="../img/porta-bian.jpeg" alt="">
+        </div>
+    </div>
+
+    <div class="timmer">
+        <!-- timmer -->
+         <div  class="timmer-invite">
+            <p style="color: black; font-size: 4rem;"> Venis? </p>
+            <p style="font-family: 'Roboto', sans-serif; color: black; font-size: 1rem;">estoy emocionada faltan:</p>
+            <div class="timmer-sen">
+                 <!-- Display the countdown timer in an element -->
+                 <p id="demo"></p>
+            </div>
+            <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black;">
+                confirmar asistencia
+            </div>
+         </div>
+        <!-- invitacion -->
+        <div class="donde-cuando">
+            <p> Donde y cuando </p>
+            <p style="font-family: 'Roboto', sans-serif; color: black; font-size: 1.5rem;"> Janos acceso oeste </p>
+            <img src="../img/salon-bian.png" alt="">
+        </div>
+
+        <div class="invite-dias">
+            <p class="dia">Domingo 25</p>
+            <p class="mes">Enero</p>
+            <p class="ano">2026</p>
+        </div>
+
+        <!-- celebracion -->
+        <div class="celebracion">
+            <p>Celebracion</p>
+            <p>21:30hs a 05:30hs</p>
+            <div class="copas">
+                <img src="../img/mariposa-dos.png" alt="">
+            </div>
+            <p>Janos Acceso Oeste</p>
+            <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black; ">
+                <a href="https://maps.app.goo.gl/FcvZYthz4qtbrYWz6" target="_blank" style="text-decoration: none; color: black;">
+                    Llegar al salon
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- fotos -->
+    <div class="fotos-pareja">
+        <div class="fotos">
+            <div>
+               <img src="../img/bian-uno.jpg" alt=""> 
+            </div>
+            <div>
+                <img src="../img/bian-dos.jpg" alt=""> 
+             </div>
+        </div>
+    </div>
+   
+
+    <!-- dress code -->
+    <div class="dress" style="height: 100vh; background-image: url(../img/mariposa-uno.png); background-size: contain; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <p class="p-uno">Dress Code</p>
+        <img src="../img/dress-code.png" alt="" width="50%">
+        <p class="p-uno">Elegante</p>
+        
+        <p class="parrafo">
+            Este cumple no es un cumple más… <br>
+            Es LA noche. <br>
+            Así que caé con tu mejor facha, porque el dress code es elegante. <br>
+            Traé brillo, estilo y ganas de fiesta. <br>
+            ✨ Dress code: Elegante.
+            
+        </p>
+    </div>
+
+     <!-- fotos -->
+     <div class="fotos-pareja">
+        <div class="fotos">
+            <div>
+                <img src="../img/bian-timmer.jpeg" alt=""> 
+             </div>
+        </div>
+    </div>
+
+    <!-- final -->
+    <div class="final">
+       
+        <p class="parrafo">¡La cuenta regresiva comenzó!  Tenés tiempo para confirmarnos tu presencia hasta el 10 de Enero.
+        </p>
+
+        <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black; ">
+            Confirmar a Bian
+        </div>
+
+        <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black; ">
+            Confirmar a Yesi
+        </div>
+        
+    </div>
+
+</body>
+</html>
