@@ -43,39 +43,14 @@
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
-
-    const audio = document.getElementById('bg');
-  let started = false;
-
-  // Intentar iniciar en silencio
-  audio.muted = true;
-  audio.play().catch(()=>{});
-
-  // Cuando tocan la pantalla 👉 activar sonido real
-  document.addEventListener("touchstart", () => {
-    if(!started){
-      audio.muted = false;
-      audio.volume = 0.6;
-      started = true;
-    }
-  }, { once:true });
-
-  // Por si lo tocan con clic en compu
-  document.addEventListener("click", () => {
-    if(!started){
-      audio.muted = false;
-      audio.volume = 0.6;
-      started = true;
-    }
-  }, { once:true });
-
     </script>
 </head>
 <body class="invitacion invitacion-dos invitacion-bian">
 
-    <audio id="bg"  autoplay loop>
-        <source src="sonido/cancion.mp3"  autoplay loop type="audio/mpeg">
-    </audio>
+    <audio autoplay>
+        <source src="sonido/cancion.mp3" type="audio/mpeg">
+      </audio>
+    
     <div class="inicio" style="height: 100vh; background-image: url(./img/mariposa-uno.png); background-size: contain;">
         <p class="p-uno" style="font-size: 20px;">¡ Te invito a mis 15 ♡ !</p> 
         <p class="p-dos" style="font-size: 40px;"> Bian.</p>
@@ -94,7 +69,9 @@
                  <p id="demo"></p>
             </div>
             <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black;">
-                confirmar asistencia
+                <a href="#confirmar" style="text-decoration: none; color: black;">
+                    confirmar asistencia 
+                </a>
             </div>
          </div>
         <!-- invitacion -->
@@ -185,17 +162,21 @@
     </div>
 
     <!-- final -->
-    <div class="final">
+    <div class="final" id="confirmar">
        
         <p class="parrafo">¡La cuenta regresiva comenzó!  Tenés tiempo para confirmarnos tu presencia hasta el 10 de Enero.
         </p>
 
         <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black; ">
+            <a href="https://wa.me/1138034208?text=Hola%20Bian%20quiero%20confirmar" target="_blank" style="text-decoration: none; color: black;">
             Confirmar a Bian
+            </a>
         </div>
 
         <div class="boton-invite" style="background-color: #5A6953; color: black; box-shadow: 2px 2px 5px black; ">
-            Confirmar a Yesi
+            <a href="https://wa.me/1133674957?text=Hola%20Yesi%20quiero%20confirmar" target="_blank" style="text-decoration: none; color: black;">
+                Confirmar a Yesi
+                </a>
         </div>
         
     </div>
