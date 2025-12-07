@@ -43,11 +43,19 @@
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
+
+    const audio = document.getElementById('bg');
+
+    // intentar subir el volumen tras unos ms
+    setTimeout(() => {
+    audio.volume = 0.6; // subís volumen
+    // audio.muted = false; // intento de sacar mute (a veces bloqueado)
+    }, 500);
     </script>
 </head>
 <body class="invitacion invitacion-dos invitacion-bian">
 
-    <audio autoplay loop>
+    <audio id="bg" autoplay muted loop>
         <source src="sonido/cancion.mp3" type="audio/mpeg">
     </audio>
     <div class="inicio" style="height: 100vh; background-image: url(./img/mariposa-uno.png); background-size: contain;">
