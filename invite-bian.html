@@ -45,18 +45,36 @@
     }, 1000);
 
     const audio = document.getElementById('bg');
+  let started = false;
 
-    // intentar subir el volumen tras unos ms
-    setTimeout(() => {
-    audio.volume = 0.6; // subís volumen
-    // audio.muted = false; // intento de sacar mute (a veces bloqueado)
-    }, 500);
+  // Intentar iniciar en silencio
+  audio.muted = true;
+  audio.play().catch(()=>{});
+
+  // Cuando tocan la pantalla 👉 activar sonido real
+  document.addEventListener("touchstart", () => {
+    if(!started){
+      audio.muted = false;
+      audio.volume = 0.6;
+      started = true;
+    }
+  }, { once:true });
+
+  // Por si lo tocan con clic en compu
+  document.addEventListener("click", () => {
+    if(!started){
+      audio.muted = false;
+      audio.volume = 0.6;
+      started = true;
+    }
+  }, { once:true });
+
     </script>
 </head>
 <body class="invitacion invitacion-dos invitacion-bian">
 
-    <audio id="bg" autoplay muted loop>
-        <source src="sonido/cancion.mp3" type="audio/mpeg">
+    <audio id="bg"  autoplay loop>
+        <source src="sonido/cancion.mp3"  autoplay loop type="audio/mpeg">
     </audio>
     <div class="inicio" style="height: 100vh; background-image: url(./img/mariposa-uno.png); background-size: contain;">
         <p class="p-uno" style="font-size: 20px;">¡ Te invito a mis 15 ♡ !</p> 
